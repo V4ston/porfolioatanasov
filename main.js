@@ -23,7 +23,7 @@ if (savedTheme === "light") {
     img.src = "./images/LightMode-removebg-preview.png";
 }
 
-DarkLight.addEventListener("click", function(e) {
+DarkLight.addEventListener("click", function (e) {
     e.preventDefault();
     document.body.classList.toggle("light-mode");
 
@@ -37,6 +37,37 @@ DarkLight.addEventListener("click", function(e) {
         localStorage.setItem("theme", "dark");
     }
 });
+
+const discover = document.getElementsByClassName("discover");
+const immagini = document.getElementsByClassName("immagini");
+
+for (let i = 0; i < discover.length; i++) {
+    discover[i].classList.add('d-none');
+}
+
+let visible = false;
+
+for (let j = 0; j < immagini.length; j++) {
+
+    immagini[j].addEventListener("click", function () {
+
+        if (visible == false) {
+
+            discover[j].classList.remove('d-none');
+            immagini[j].style.boxShadow = "0 0 15px 5px rgba(0, 128, 0, 0.6)";
+            visible = true;
+        }
+        else {
+
+            for (let i = 0; i < discover.length; i++) {
+                discover[i].classList.add('d-none');
+                immagini[i].style.boxShadow = "none";
+            }
+            visible = false;
+        }
+
+    });
+}
 
 /*document.addEventListener("DOMContentLoaded", function() {
 

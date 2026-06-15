@@ -19,7 +19,7 @@ body {
     background: #333;
     border: 2px solid #ccc;
     border-radius: 5px;
-
+    
     transition: background 1s ease, border-color 1s ease;
 }
 
@@ -308,7 +308,7 @@ body {
         border-bottom: 2px solid #000;
     }
 
-    /* F O R M */
+    /* F O R M 
 
     .login-card {
         width: 90%;
@@ -339,7 +339,7 @@ body {
         border-bottom: none !important;
         text-decoration: none !important;
         margin-right: 15px ;
-    }
+    }*/
 }
 
 /* M O D A L I T A' L I G H T */
